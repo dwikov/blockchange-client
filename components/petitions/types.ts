@@ -2,9 +2,7 @@ export type Petition = {
     id: string,
     name:string,
     info:string,
-    image:string,
- //   (id:string):void
-    
+    image:string,  
 }
 
 export type Petitions = Petition[];

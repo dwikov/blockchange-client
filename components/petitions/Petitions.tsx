@@ -9,21 +9,24 @@ interface Props{
 const Petitions = ({ petitions } : Props) => {
    
     return (  
-        <div >
-            <select className={styles.format}>
-  <option value="Recent"> Recent Petition</option>
-  <option value="New"> New Petition</option>
-  <option value="Your"> Your Petition</option>
-</select>
-       
+        <div>
+         <select className={styles.format}>
+             <option value="Recent"> Recent Petition</option>
+             <option value="New"> New Petition</option>
+             <option value="Your"> Your Petition</option>
+         </select>
 
         <div>
-        {petitions.map((petition:types.Petition) => {
-          return <Petition key={petition.id}{...petition}  />;
-        })}
+
+        {
+        petitions.map((petition:types.Petition) =>
+         {
+          return <Petition key={petition.id}  {...petition}  />;
+         }
+        )}
       </div>
         </div>
-    );
+        );
 }
  
 export default Petitions;
