@@ -1,0 +1,61 @@
+
+.singlePetition {
+    background: #fff;
+    border-radius:0.25rem;
+    margin: 2rem 0;
+    width: auto;
+    padding-bottom: 20px;
+    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
+    transition:  all 0.3s linear;
+  }
+  .singlePetition:hover {
+    box-shadow:0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  .PetitionName{
+   text-align: center;
+   font-size: 30px;
+  }
+  .singlePetitionImg {
+    width: 70%;
+    height: 20rem;
+    margin-left: 15%;
+    object-fit: cover;
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius:0.25rem;
+  }
+  .singlePetitionInfo {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 1.5rem;
+  }
+  .interestBtn {
+    background: transparent;
+    border-color: transparent;
+    text-transform: capitalize;
+    color: hsl(205, 78%, 60%);
+    font-size: 1rem;
+    cursor: pointer;
+    padding-left: 0.25rem;
+    display: block;
+    margin-left: 900px;
+    margin-bottom: 20px;
+    width: 220px;
+    height: 50px;
+    color: hsl(360, 67%, 44%);
+    letter-spacing:0.1rem;
+    border: 1px solid hsl(360, 67%, 44%);
+    border-radius: 0.25rem;
+  }
+ .readBtn{
+    background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  color:hsl(360, 67%, 44%);
+  margin-right: 120px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-left: 0.25rem;
+ }

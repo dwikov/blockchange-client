@@ -1,0 +1,29 @@
+.title{
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Rubik Distressed', cursive;
+    font-size: 70px;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+   
+  }
+  .userDetail{
+  
+    display: flex;
+    justify-content:right;
+    color:black;
+    margin-right: 50px;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    
+    
+  }
+  .userID{
+    margin-right: 10px;
+  }
+  .img{
+    border-radius: 50%;
+  }
