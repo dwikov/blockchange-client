@@ -1,7 +1,6 @@
-import { useState } from "react";
+
 import styles from './Petition.module.css'
 import Link from 'next/link'
-import {createContext, useContext} from "react"
 interface Props{
   id:string,
   image:string,
@@ -9,17 +8,15 @@ interface Props{
   name:string,
 }
 
-export const UserContext = createContext('Default') 
-
-
 const petition= ({ id, image, info, name}:Props) => {
 
     return (  
       <>
-      <UserContext.Provider value="Not default"/>
+
         <article className={styles.singlePetition}>
-     
+      <div className={styles.imgParent}>
         <img src={image} alt={name} className={styles.singlePetitionImg}  />
+        </div>
         <footer>
           <div className={styles.PetitionName}>
             <h4>{name}</h4>
@@ -31,7 +28,11 @@ const petition= ({ id, image, info, name}:Props) => {
           </p>
           <button className={styles.interestBtn} >
          
-         <Link href={`/petitionPage/${id}`} >
+         <Link href={{
+         pathname: `/petitionPage/${id}`,
+         query: { id, image, info, name}, // the data
+        
+        }} >
          Read More
         </Link>
           </button>
