@@ -1,38 +1,28 @@
 import type { NextPage } from 'next'
-import { useEffect, useState } from 'react'
 import NavBar from '../components/NavBar/NavBar'
-import Petitions from '../components/petitions/Petitions'
 import styles from '../styles/Home.module.css'
-import * as types from '../components/petitions/types'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
-
-  const url = 'https://course-api.com/react-tours-project'
-  const [petitions, setPetitions] = useState<types.Petitions>([])  
-
-
-  const fetchPetitions = async () => {
-      const response = await fetch(url)
-      const petitions = await response.json()
-      setPetitions(petitions)
-    }
     
-    useEffect(() => {
-      fetchPetitions()  
-    }, [])
-    
+         
+     
   return (
-    <>
-  
-    <div className={styles.container}>
-
-    <NavBar/>
-
-    <Petitions  petitions={petitions}/>
+    <div className={styles.conatiner}>
+    <div className={styles.Home}>
+    <div className={styles.OverLay}>
+         <NavBar/>
+        <div className={styles.HomeContent}>
+        <h1 className={styles.Title}>we are creative agency</h1>
+        <p className={styles.HomeDiscription}>We change everything WordPress.
+           One WP theme at a time.</p>
+        <Link href="/Feed">
+        <button className={styles.BtnStart}>Get started</button>
+        </Link>
     </div>
-
-    </>
-    
+   </div>
+  </div>
+</div>
   )
 }
 

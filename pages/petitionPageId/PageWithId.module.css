@@ -1,4 +1,6 @@
-
+.container {
+  padding: 0 9rem;
+}
 .singlePetition {
     background: #fff;
     border-radius:0.25rem;

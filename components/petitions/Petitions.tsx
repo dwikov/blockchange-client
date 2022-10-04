@@ -1,6 +1,7 @@
 import Petition from "./Petition";
 import * as types from './types'
 import styles from './Petitions.module.css'
+import Link from "next/link";
 
 interface Props{
     petitions: types.Petitions;
@@ -15,9 +16,13 @@ const Petitions = ({ petitions } : Props) => {
              <option value="New"> New Petition</option>
              <option value="Your"> Your Petition</option>
          </select>
-
+         <Link href="/AddPetition">
+         <button className={styles.Btn}>
+            Add Petition
+         </button>
+         </Link>
         <div>
-
+       
         {
         petitions.map((petition:types.Petition) =>
          {

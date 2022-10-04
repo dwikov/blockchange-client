@@ -16,10 +16,9 @@ const petition= ({ id, image, info, name}:Props) => {
       <>
         <article className={styles.singlePetition}>
 
-        <div className={styles.imgParent}>
-
-        <img src={image} alt={name} className={styles.singlePetitionImg}  />
-        </div>
+             <div className={styles.imgParent}>
+              <img src={image} alt={name} className={styles.singlePetitionImg}  />
+             </div>
 
         <footer>
           <div className={styles.PetitionName}>
@@ -27,17 +26,17 @@ const petition= ({ id, image, info, name}:Props) => {
           </div>
 
           <p className={styles.singlePetitionInfo}>
-          {`${PartInfo}...`}
-       
+               {`${PartInfo}...`}
           </p>
-          <button className={styles.interestBtn} >
+              <button className={styles.interestBtn} >
          
-         <Link href={{
-         pathname: `/petitionPage/${id}`,
-         query: { id, image, info, name}, 
-        }} >
-         Read More
-        </Link>
+          <Link href={{
+           pathname: `/petitionPageId/${id}`,
+           query: { id, image, info, name}, 
+              }}>
+
+             Read More
+          </Link>
 
          </button>
         </footer>
