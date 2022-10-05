@@ -8,6 +8,9 @@ import { PetitionInput, Petition } from "./types";
 import { parsePetitionInput } from "./utils";
 import { ethers } from "ethers";
 import { WebSocketProvider } from '@ethersproject/providers';
+import * as types from './types'
+import styles from './Petitions.module.css'
+import Link from "next/link";
 
 export const Petitions = () => {
   const { data: signer, isError, isLoading } = useSigner();
@@ -74,5 +77,28 @@ export const Petitions = () => {
       <input type="submit"/>
     </form>
     { petitions && petitions.map((petition: Petition, index) => <button onClick={() => voteCallback(index)} key={index}>{petition.title}</button>) }
+    (  
+        <div>
+         <select className={styles.format}>
+             <option value="Recent"> Recent Petition</option>
+             <option value="New"> New Petition</option>
+             <option value="Your"> Your Petition</option>
+         </select>
+         <Link href="/AddPetition">
+         <button className={styles.Btn}>
+            Add Petition
+         </button>
+         </Link>
+        <div>
+       
+        {
+        petitions.map((petition:types.Petition) =>
+         {
+          return <Petition key={petition.id}  {...petition}  />;
+         }
+        )}
+      </div>
+        </div>
+        );
   </>;
 };

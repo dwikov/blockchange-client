@@ -16,3 +16,6 @@ export interface Petition{
     title: string;
     description: string;
 }
+
+export type Petitions = Petition[];
+
