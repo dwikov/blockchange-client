@@ -8,6 +8,10 @@ const PageWithId = () => {
     const  petition  = router.query
 
     return ( 
+      <>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+   <link rel="preconnect" href="https://fonts.gstatic.com" />
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet"/>
       <div className={styles.container}>
                 <NavBar/>
         <article className={styles.singlePetition}>
@@ -25,11 +29,12 @@ const PageWithId = () => {
 
                <footer>         
                  <p className={styles.singlePetitionInfo}>
-                    { petition.info}
+                    <strong>{ petition.info}</strong>
                  </p> 
               </footer>       
         </article>
       </div>
+      </>
 );
 }
  

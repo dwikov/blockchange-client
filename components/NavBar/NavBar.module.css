@@ -1,13 +1,21 @@
 .title{
-    font-family: 'PT Sans', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Rubik Distressed', cursive;
+  font-family: 'Poiret One', cursive;
     font-size: 70px;
     margin-left: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
+    color: #8a878a;
     position: relative;
    
+  }
+  .home{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    display: flex;
+    float:right;
+
   }
   .userDetail{
   
@@ -27,3 +35,10 @@
   .img{
     border-radius: 50%;
   }
+  .a{
+    text-decoration: none;
+  }
+  .a:hover {
+    cursor:pointer;
+   }
+  

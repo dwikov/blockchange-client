@@ -1,6 +1,16 @@
 .container {
   padding: 0 9rem;
 }
+.title{
+  font-family: 'Poiret One', cursive;
+  font-size: 150px;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  position: relative;
+ 
+}
 .Home{
   height: 100vh;
   background-image: url('https://dl.airtable.com/.attachments/a0cd0702c443f31526267f38ea5314a1/2447eb7a/paris.jpg');
