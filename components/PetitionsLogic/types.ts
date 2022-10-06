@@ -10,12 +10,9 @@ export interface PetitionInput{
 }
 
 export interface Petition{
-    id: number;
+    id: Number;
     votersCount: number;
     timeCreated: number;
     title: string;
     description: string;
 }
-
-export type Petitions = Petition[];
-

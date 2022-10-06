@@ -4,9 +4,6 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
 const Home: NextPage = () => {
-    
-         
-     
   return (
     <>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -21,7 +18,7 @@ const Home: NextPage = () => {
         <h1 className={styles.Title}>we are creative agency</h1>
         <p className={styles.HomeDiscription}>We change everything WordPress.
            One WP theme at a time.</p>
-        <Link href="/Feed">
+        <Link href="/feed">
         <button className={styles.BtnStart}>Get started</button>
         </Link>
     </div>

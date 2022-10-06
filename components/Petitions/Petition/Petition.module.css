@@ -8,14 +8,17 @@
     padding-bottom: 20px;
     box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
     transition:  all 0.3s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .singlePetition:hover {
     box-shadow:0 5px 15px rgba(0, 0, 0, 0.2);
   }
   .PetitionName{
     color: black;
-   text-align: center;
-   font-size: 30px;
+    text-align: center;
+    font-size: 30px;
   }
   .imgParent{
     margin-left: 20%;
@@ -23,13 +26,9 @@
     width: 45%
   }
   .singlePetitionInfo {
-    display: flex;
-    position: absolute;
-    top: 50%;
     font-size: 20px;
-    justify-content: space-between;
-    align-items: center;
-   
+    justify-content: space-between;  
+    text-align: center; 
   }
   .interestBtn {
     background: transparent;
@@ -40,7 +39,6 @@
     cursor: pointer;
     padding-left: 0.25rem;
     display: block;
-    margin-left: 900px;
     margin-bottom: 30px;
     width: 220px;
     height: 50px;
@@ -51,8 +49,6 @@
     position:inherit;
     -ms-transform: translateY(80%);
     transform: translateY(80%);
-    
-
   }
 .foot{
   position: relative;
