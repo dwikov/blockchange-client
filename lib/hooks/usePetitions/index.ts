@@ -57,13 +57,13 @@ const usePetitions = () => {
     const description = data['description'];
     const cid = await upload(description);
 
-    await contract.addPetition(title, cid?.toString()).catch(e => console.log(e));
+    await contract.addPetition(title, cid?.toString()).catch((e: any) => console.log(e));
   }, [signer]);
 
   const voteCallback = useCallback((id: number) => {
     if(!signer)return;
 
-    contract.vote(id).catch(e => console.log(e));
+    contract.vote(id).catch((e: any) => console.log(e));
   }, [signer]);
 
   const getPetitionById = (id: string) => petitions[id];

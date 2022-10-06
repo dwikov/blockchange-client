@@ -1,5 +1,5 @@
 import { CID } from "ipfs-http-client";
-import { PetitionInput, Petition } from "../PetitionsLogic/types";
+import { PetitionInput, Petition } from "../Petitions/types";
 
 export const parsePetitionInput = async (petition: PetitionInput, retrieve: (cid: CID) => Promise<string>): Promise<Petition> => {
   const description = await retrieve(petition.ipfsCID);
