@@ -4,27 +4,26 @@ import styles from './Petitions.module.css'
 import Link from "next/link";
 import Petition from "./Petition/Petition";
 import usePetitions from "lib/hooks/usePetitions";
+import styled from "styled-components";
+import Loading from "components/Loading/Loading";
+
+const Container = styled.div`
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const Petitions = () => {
   const { petitionsList } = usePetitions();
 
   return <div>
-      <select className={styles.format}>
-          <option value="Recent"> Recent Petition</option>
-          <option value="New"> New Petition</option>
-          <option value="Your"> Your Petition</option>
-      </select>
-      <Link href="/AddPetition">
-      <button className={styles.Btn}>
-        Add Petition
-      </button>
-      </Link>
-    <div>
+    <Container>
       { petitionsList.map( (petition: IPetition) => {
           return <Petition key={petition.id.toString()}  item={petition}  />;
         })
       }
-    </div>
+    </Container>
   </div>;
 };
 

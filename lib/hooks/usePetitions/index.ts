@@ -6,6 +6,7 @@ import { listenToEvents, removeListeners, createEvents, clearEvents } from './ev
 import { IPetitionMap } from "./types";
 import useIpfs from "lib/hooks/useIpfs";
 import { getPetitionsMap } from "./utils";
+import { LoadingContext } from "pages/_app";
 
 interface IPetitionsContext{
   value: IPetitionMap,
@@ -16,6 +17,8 @@ export const PetitionsContext = createContext<IPetitionsContext>({value: {}, set
 
 const usePetitions = () => {
   const { value: petitions, setter: setPetitions } = useContext(PetitionsContext);
+  const loading = useContext(LoadingContext);
+
   const [petitionsList, setPetitionsList] = useState<IPetition[]>([]);
 
   const { data: signer, isError, isLoading } = useSigner();
@@ -35,9 +38,11 @@ const usePetitions = () => {
 
   useEffect(() => {
     if(!signer)return;
+    loading.setter('Loading petitions');
 
     getPetitionsMap(contract, retrieve)
       .then(setPetitions)
+      .then(() => loading.setter(null))
       .catch(console.error);
 
   }, [signer]);

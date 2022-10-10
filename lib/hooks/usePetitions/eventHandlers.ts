@@ -88,6 +88,7 @@ export const createEvents = (setter: any, retriever: any) => {
         setter((prev: any) => prev && {...prev, [id]: { ...prev[id],  votersCount: votersCount }});
       }
     },
+    
   ].forEach(({ eventInterface, cb }) => eventHandlersInstance.addEvent(eventInterface, cb));
 } 
 

@@ -16,7 +16,6 @@ const Wallet = () => {
   return <>
      <div className={styles.walletContainer}>
      {isConnected && address ? <>
-        <Image src={ProfileDefault} layout="intrinsic" width={constants.IMAGE_WIDTH} height={constants.IMAGE_HEIGHT}/>
         <div>{shortenAddress(address)}</div>
       </> : <>
         <button onClick={() => connect()}>Connect wallet</button>
