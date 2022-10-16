@@ -1,0 +1,51 @@
+.title{
+  font-family: 'Poiret One', cursive;
+  font-size: 70px;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #8a878a;
+  position: relative; 
+}
+
+.home{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  display: flex;
+  float:right;
+}
+
+.userDetail{
+  display: flex;
+  justify-content:right;
+  color:black;
+  margin-right: 50px;
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+.userID{
+  margin-right: 10px;
+}
+.img{
+  border-radius: 50%;
+}
+.a{
+  text-decoration: none;
+}
+.a:hover {
+  cursor:pointer;
+}
+  
+.nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.wallet{
+  margin-left: auto; 
+  margin-right: 0;
+}

@@ -1,0 +1,90 @@
+.container {
+    padding: 0 9rem;
+  }
+  .CreateTitle {
+    font-size: 50px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    color:black
+}
+
+.Title {
+    text-align: center;
+}
+
+.TitleText {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border-bottom: 3px solid #cf3636;
+    padding: 10px 10px;
+    width: 500px;
+    height: 50px;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    transition: all .3s linear;
+}
+
+
+
+.Petition {
+    text-align: center;
+}
+
+.PetitionText {
+    width: 1200px;
+    height: 270px;
+    padding: 60px;
+    background-color: white;
+    color: black;
+    outline: none;
+    font-size: 18px;
+    border: 3px solid #cf3636;
+    resize: none;
+    transition: .3s linear;
+}
+
+.bottom {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    outline: none;
+    margin-left: 20px;
+    
+    background-color:#cf3636;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+.button:hover, .button:focus {
+    color: white;
+    border-color: white;
+    
+    border: 3px solid #cf3636;
+}
+.Upload{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    outline: none;
+    margin-left: 20px;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: .3s linear;
+    cursor: pointer;
+}
